@@ -1,0 +1,28 @@
+<h1 class="bg-primary text-white p-4 mb-4 text-capitalize">this is my main component</h1>
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-sm-12">
+            <app-severs></app-severs>
+        </div> -->
+        <!-- <div class="col-sm-12">
+            <h3 class="jumbotron p-2">Structural Directives</h3>
+            <app-structural-directives></app-structural-directives>
+        </div>
+        <div class="col-sm-12">
+            <h3 class="jumbotron p-2">Attribute Directives</h3>
+            <app-attribute-directive></app-attribute-directive>
+        </div> -->
+        <p [textContent]="'Hello Input and Out Decorators'"></p>
+        <p>
+            This is msg from child component  {{msgFromChild}}
+        </p>
+        <div class="col-sm-12">
+            <!-- <app-server></app-server> -->
+        </div>
+        <div class="col-sm-12">
+            <!-- we have used 'coustom Property' to transfer data from parent to child  -->
+            <!-- we use coustom events to transfer date from child to parent  -->
+            <app-input-dec [msg]="msgForChild" (childEvent)="onChildTriggred($event)"></app-input-dec>
+        </div>
+    </div>
+</div>

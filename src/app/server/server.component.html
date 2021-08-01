@@ -1,0 +1,16 @@
+<!-- <p 
+    [ngStyle]="{backgroundColor : serverStatus == 'Online' ? 'yellowgreen' : 'orange'}">
+    Server Works with ID: {{serverId}} 
+    and with server status
+     {{serverStatus}}
+</p> -->
+
+<p 
+    [ngStyle]="{backgroundColor : getColor()}"
+    [ngClass]="{white : serverStatus === 'Online'}">
+    Server Works with ID: {{serverId}} 
+    and with server status
+     {{serverStatus}}
+</p>
+
+<app-input-dec [msg]="msgFromServer"></app-input-dec>

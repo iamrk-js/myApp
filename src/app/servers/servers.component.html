@@ -1,0 +1,33 @@
+<!-- <input 
+type="text" 
+class="form-control"
+(input)="onServerNameUpdate($event)"> -->
+
+<input 
+type="text" 
+class="form-control"
+[class.active]="isActive"
+[(ngModel)] = "serverName"
+>
+
+<!-- <p>{{serverName}}</p> -->
+<p [textContent]="serverName"
+[style.backgroundColor]="isActive ? 'blueviolet' : 'orange'"></p>
+
+<button 
+(click)="onServerCreated()"
+[disabled] = "allowNewServer"
+[attr.class]="btnclasses"
+>click</button>
+
+<p>{{newServerStatus}}</p>
+
+<hr>
+
+<input class="form-control" 
+(keyup)="onKeyUp($event)" value="Press Enter">
+
+<input class="form-control" 
+(keyup.enter)="onKeyUp2($event)" value="Press Enter">
+
+<app-server *ngFor="let server of serverList"></app-server>

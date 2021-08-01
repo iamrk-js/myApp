@@ -1,0 +1,24 @@
+<!-- <img src="../../assets/images/ts.png" alt=""> -->
+
+<!-- property binding  -->
+<!-- <h5>{{heading}}</h5> -->
+<!-- <h5 [textContent]="heading"></h5> -->
+<h5 [innerText]="heading"></h5>
+<img [src]="imgUrl" alt="">
+<hr>
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <td>Ravikiran</td>
+            <td>Niturkar</td>
+        </tr>
+        <tr>
+            <!-- <td colspan="2">
+                nravikiran5@gmail.com
+            </td> -->
+            <td [attr.colspan]="colSpanValue">
+                nravikiran5@gmail.com
+            </td>
+        </tr>
+    </tbody>
+</table>
